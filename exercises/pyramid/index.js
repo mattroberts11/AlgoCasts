@@ -15,13 +15,26 @@
 //       '#####'
 
 function pyramid(n) {
+  // determine how many columns there will be
+  let totalCols = n + (n - 1);
+  let midpoint = Math.floor(totalCols / 2);
 
   for(let row = 0; row < n; row++) {
     let level = '';
 
-    // determine how many columns there will be
-
+    for(let col = 0; col < totalCols; col++){
+      // if the col should have a #
+      if( midpoint - row <= col && midpoint + row >= col) {
+        // add # to level
+        level += '#';
+      } else {
+      // else add a space to level
+        level += ' ';
+      }
+    }
+    // console log level
+    console.log(level);
   }
 }
-
+// pyramid(4) // for debug
 module.exports = pyramid;
