@@ -8,6 +8,20 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+
+  // something to hold data in order
+  constructor() {  // this is automatically called when we create a new instance
+    this.data = [];
+  }
+
+  add(record) {
+    this.data.unshift(record);
+  }
+
+  remove() {
+    return this.data.pop()
+  }
+}
 
 module.exports = Queue;
