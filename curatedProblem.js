@@ -1,5 +1,5 @@
 
-const arr = [20, 5, 5, 10, 2, 30, 2];
+const arr = [20, 5, 5, 10, 2, 30, 2]; // with duplicates
 
 const  transformOrder = (arr) => {
 
